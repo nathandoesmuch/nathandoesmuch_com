@@ -1,7 +1,7 @@
 from flask import Flask, redirect
 app = Flask(__name__)
 
-@app.route('')
+@app.route('/')
 def index():
     return redirect("https://www.linkedin.com/in/nathandoesmuch/", code=302)
 
