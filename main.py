@@ -1,9 +1,9 @@
-from flask import Flask, redirect
+from flask import Flask, redirect, render_template
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return redirect("https://www.linkedin.com/in/nathandoesmuch/", code=302)
+    return render_template('index.html')
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0')
+    app.run(debug=True)
